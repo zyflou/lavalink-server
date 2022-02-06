@@ -1,6 +1,6 @@
 {
     "name": "Lavalink Server",
-    "description": "Deploy Lavalink to Heroku or Railway",
-    "repository": "https://github.com/cobaltgit/heroku-railway-lavalink",
+    "description": "Deploy Lavalink to Heroku",
+    "repository": "https://github.com/cobaltgit/lavalink-server",
     "keywords": ["lavalink", "discord.py", "jda", "wavelink", "lavalink.py"]
   }

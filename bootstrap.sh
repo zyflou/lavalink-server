@@ -1,5 +1,5 @@
 #!/bin/bash
-# Heroku/Railway Lavalink Bootstrapper
+# Heroku Lavalink Bootstrapper
 
 URL="https://ci.fredboat.com/repository/download/Lavalink_Build/.lastSuccessful/Lavalink.jar?guest=1&branch=refs/heads/dev"
 
