@@ -1,7 +1,11 @@
 #!/bin/bash
 # Heroku Lavalink Bootstrapper
 
-URL="https://ci.fredboat.com/repository/download/Lavalink_Build/.lastSuccessful/Lavalink.jar?guest=1&branch=refs/heads/dev"
+URL=$(curl -s https://api.github.com/repos/Cog-Creators/Lavalink-Jars/releases/latest \
+| grep "browser_download_url.*jar" \
+| cut -d : -f 2,3 \
+| tr -d \" \
+| wget -qi -)
 
 echo "Downloading lavalink jar..."
 curl -fsSL $URL -o Lavalink.jar
