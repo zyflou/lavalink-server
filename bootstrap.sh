@@ -1,6 +1,8 @@
 #!/bin/bash
 # Heroku Lavalink Bootstrapper
 
+cd "$(dirname "$0")
+
 URL=$(curl -fsSL https://api.github.com/repos/Cog-Creators/Lavalink-Jars/releases/latest \
 | grep "browser_download_url.*jar" \
 | cut -d : -f 2,3 \
