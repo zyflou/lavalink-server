@@ -17,7 +17,7 @@ $ docker build -t lavalink "."
 ### Running
 Docker CLI:
 ```bash
-$ docker run -dit -e PORT=<port-number> -e PASSWORD=youshallnotpass -p <port-number:port-number> --restart=unless-stopped --name lavalink lavalink
+$ docker run -dit -e PORT=<port-number> -e PASSWORD=youshallnotpass -p <port-number>:<port-number> --restart=unless-stopped --name lavalink lavalink
 ```
 Docker-Compose:
 ```yml
