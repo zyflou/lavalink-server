@@ -1,5 +1,5 @@
 #!/bin/bash
-# Heroku Lavalink Bootstrapper
+# Lavalink Bootstrapper
 
 cd "$(dirname "$0")"
 

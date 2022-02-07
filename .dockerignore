@@ -1,0 +1,10 @@
+Dockerfile
+.gitignore
+README.md
+logs/
+Lavalink.jar
+.replit
+Procfile
+app.json
+replit-java.sh
+pom.xml
