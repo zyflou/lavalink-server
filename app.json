@@ -3,4 +3,4 @@
     "description": "Deploy Lavalink to Heroku",
     "repository": "https://github.com/cobaltgit/lavalink-server",
     "keywords": ["lavalink", "discord.py", "jda", "wavelink", "lavalink.py"]
-  }
+}
