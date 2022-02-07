@@ -7,4 +7,5 @@ echo "Installing JDK $OPENJDK_VERSION..."
 curl -sL https://github.com/shyiko/jabba/raw/master/install.sh | bash -s -- --skip-rc && . ~/.jabba/jabba.sh
 jabba install $OPENJDK_VERSION
 
+echo "Handing over to bootstrapper..."
 exec bash bootstrap.sh
