@@ -1,15 +1,16 @@
 #!/bin/bash
 # Lavalink Bootstrapper
 
-cd "$(dirname "$0")"
+cd "$(dirname "$0")" || exit
 
+MEMORY="${MEMORY:-300M}"
 URL=$(curl -fsSL https://api.github.com/repos/Cog-Creators/Lavalink-Jars/releases/latest \
 | grep "browser_download_url.*jar" \
 | cut -d : -f 2,3 \
 | tr -d \")
 
 echo "Downloading lavalink jar..."
-curl -fsSL $URL -o Lavalink.jar
+curl -fsSL "$URL" -o Lavalink.jar
 
 echo "Downloading envsubst binary..."
 curl -fsSL "https://github.com/a8m/envsubst/releases/download/v1.2.0/envsubst-$(uname -s)-$(uname -m)" -o envsubst
@@ -19,4 +20,5 @@ echo "Substituting environment variables..."
 rm -f envsubst
 
 echo "All set! Now, let's start Lavalink!"
-exec java -jar Lavalink.jar
+
+exec java -Djdk.tls.client.protocols=TLSv1.1,TLSv1.2 -Xmx"${MEMORY}" -jar Lavalink.jar
