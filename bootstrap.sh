@@ -4,13 +4,13 @@
 cd "$(dirname "$0")" || exit
 
 MEMORY="${MEMORY:-300M}"
-URL=$(curl -fsSL https://api.github.com/repos/Cog-Creators/Lavalink-Jars/releases/latest \
-| grep "browser_download_url.*jar" \
-| cut -d : -f 2,3 \
-| tr -d \")
 
 echo "Downloading lavalink jar..."
-curl -fsSL "$URL" -o Lavalink.jar
+curl -s https://api.github.com/repos/Cog-Creators/Lavalink-jars/releases/latest \
+| grep "browser_download_url.*jar" \
+| cut -d : -f 2,3 \
+| tr -d \" \
+| xargs -I % curl -sLO %
 
 echo "Downloading envsubst binary..."
 curl -fsSL "https://github.com/a8m/envsubst/releases/download/v1.2.0/envsubst-$(uname -s)-$(uname -m)" -o envsubst
