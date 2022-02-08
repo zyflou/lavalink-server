@@ -1,5 +1,5 @@
 # Deploy Lavalink to the cloud!
-NOTE: You should not use the Heroku/Replit deployment options for production insta
+NOTE: You should not use the Heroku/Replit deployment options for production installments
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)  
 To deploy to Replit, import the GitHub repository into a new Bash repl - the bootstrap scripts will take care of the rest
