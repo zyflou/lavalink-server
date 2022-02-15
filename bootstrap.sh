@@ -6,7 +6,7 @@ cd "$(dirname "$0")" || exit
 MEMORY="${MEMORY:-300M}"
 
 echo "Downloading lavalink jar..."
-curl -s https://api.github.com/repos/freyacodes/Lavalink/releases/latest \
+curl -s https://api.github.com/repos/Cog-Creators/Lavalink-jars/releases/latest \
 | grep "browser_download_url.*jar" \
 | cut -d : -f 2,3 \
 | tr -d \" \
