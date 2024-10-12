@@ -15,6 +15,6 @@ USER lavalink
 WORKDIR /opt/lavalink
 
 COPY bootstrap.sh /opt/lavalink
-COPY application.yml /opt/lavalink
+COPY application.example.yml /opt/lavalink
 
 ENTRYPOINT [ "bash", "/opt/lavalink/bootstrap.sh" ]
